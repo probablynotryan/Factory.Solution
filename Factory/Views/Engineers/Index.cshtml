@@ -1,0 +1,18 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Factory.Models;
+@model List<Factory.Models.Engineer>;
+
+<h1>3ngIn33rs</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3>nerp! go ask bobbi the robot.</h3>
+} 
+
+<ul>
+</ul>
+<p>@Html.ActionLink("ask bobbi", "Create")</p>
+<p>@Html.ActionLink("back", "Index", "Home")</p>
