@@ -32,6 +32,15 @@ namespace Factory.Controllers
         _db.SaveChanges();
         return RedirectToAction("Index");
       }
-      
+
+      public ActionResult Details(int id)
+      {
+        var thisMachine = _db.Machines
+          .Include(m => m.JoinEntities)
+          .ThenInclude(j => j.Engineer)
+          .FirstOrDefault(m => m.MachineId == id);
+        return View(thisMachine);
+      }
+        
     }
 }
