@@ -5,11 +5,11 @@
 @using Factory.Models;
 @model List<Factory.Models.Engineer>;
 
-<h1>3ngIn33rs</h1>
+<h1>Engineers</h1>
 
 @if (@Model.Count == 0)
 {
-  <h3>nerp! go ask bobbi the robot.</h3>
+  <h3>No engineers have been added to the database yet.</h3>
 } 
   @foreach(Engineer e in Model)
   {
@@ -17,5 +17,5 @@
   }
 <ul>
 </ul>
-<p>@Html.ActionLink("ask bobbi", "Create")</p>
-<p>@Html.ActionLink("back", "Index", "Home")</p>
+<p>@Html.ActionLink("Add new engineer", "Create")</p>
+<p>@Html.ActionLink("Go Back", "Index", "Home")</p>
