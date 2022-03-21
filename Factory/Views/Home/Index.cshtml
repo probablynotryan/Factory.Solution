@@ -1,5 +1,40 @@
 @{
   Layout = "_Layout";
 }
- <p>@Html.ActionLink("List All Machines", "Index", "Machines")</p>
+@using Factory.Models;
+<h4 class="float-right">Machines Avaliable</h4>
+<h4>Employeed Engineers</h4>
+<div class="row">
+  <div class="col">
+  <ul>
+    @if (ViewBag.E.Count == 0)
+    {
+      <li>None currently employeed.</li>
+    }
+    else
+    {
+      @foreach(Engineer e in ViewBag.E)
+      {
+        <li>@e.Name</li>
+      }
+    }
+    </ul>
+  </div>
+  <div class="col">
+    <ul>
+    @if (ViewBag.M.Count == 0)
+    {
+      <li>None currently avaliable.</li>
+    }
+    else
+    {
+      @foreach(Machine m in ViewBag.M)
+      {
+        <li>@m.Details</li>
+      }
+    }
+    <ul>
+  </div>
+</div>
+ <p class="float-right">@Html.ActionLink("List All Machines", "Index", "Machines")</p>
  <p>@Html.ActionLink("List All Engineers", "Index", "Engineers")</p>
