@@ -17,7 +17,7 @@
 
 ## Description
 
-TBA
+An expansion of HairSalon -- this time with many to many relationships! Watch as the database goes to hard to work with many options of engineers and machines.
 
 ## Setup/Installation Requirements
 
@@ -31,7 +31,7 @@ TBA
 * Exit MySql by typing ```quit``` in your terminal.
 * Still in terminal, navigate to your downloaded repository. _(ie: User/desktop/Factory.Solution/)_
 * Enter in ```mysql -u root -p factory < ryan_bass.sql``` to copy in the tables used in this project. (You'll need to enter your password in again.)
-* (We're still using terminal) Navigate to inside HairSalon.Solution/HairSalon and enter ```touch appsettings.json```. You can then edit that created file with a code editor of your choice and enter this on in it, followed by saving the file. (Be sure to replace PASSWORD with the password you provided during installation).: 
+* (We're still using terminal) Navigate to inside Factory.Solution/Factory and enter ```touch appsettings.json```. You can then edit that created file with a code editor of your choice and enter this on in it, followed by saving the file. (Be sure to replace PASSWORD with the password you provided during installation).: 
   ```csharp
   {
   "ConnectionStrings": {
@@ -39,10 +39,10 @@ TBA
     }
   } 
   ```
-* (Guess what: we're still using terminal from inside HairSalon/) Enter ```dotnet build```
+* (Guess what: we're still using terminal from inside Factory/) Enter ```dotnet build```
 * After a successful build, run the project by entering ```dotnet run``` (you guessed it: in terminal).
 * You should get a _Now listening on:_ line with the path of where its running. (ie: http://localhost.5000) Hold command and click it to open it up with your default browser.
-* Go wild! Add clients and stylists as you see fit!
+* Go wild!
 
 ## Known Bugs
 
