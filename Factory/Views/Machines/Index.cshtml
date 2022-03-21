@@ -5,14 +5,21 @@
 @using Factory.Models;
 @model List<Factory.Models.Machine>;
 
-<h1>M4Chh3nzz</h1>
+<h1>Machines</h1>
 
 @if (@Model.Count == 0)
 {
-  <h3>nerp! go ask stevie the robot.</h3>
+  <h3>No machines avaliable.</h3>
 } 
+else
+{
+  @foreach(Machine m in Model)
+  {
+    <li>@Html.ActionLink($"{m.Details}", "Details", new { id = m.MachineId })</li>
+  } 
+}
 
 <ul>
 </ul>
-<p>@Html.ActionLink("ask stevie", "Create")</p>
-<p>@Html.ActionLink("back", "Index", "Home")</p>
+<p>@Html.ActionLink("Add New Machine", "Create")</p>
+<p>@Html.ActionLink("Back", "Index", "Home")</p>
