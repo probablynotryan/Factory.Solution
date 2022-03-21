@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Factory.Models;
@@ -22,6 +23,7 @@ namespace Factory.Controllers
 
       public ActionResult Create()
       {
+        ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "Name");
         return View();
       }
 
@@ -36,9 +38,9 @@ namespace Factory.Controllers
       public ActionResult Details(int id)
       {
         var thisMachine = _db.Machines
-          .Include(m => m.JoinEntities)
-          .ThenInclude(j => j.Engineer)
-          .FirstOrDefault(m => m.MachineId == id);
+          .Include(machine => machine.JoinEntities)
+          .ThenInclude(join => join.Engineer)
+          .FirstOrDefault(machine => machine.MachineId == id);
         return View(thisMachine);
       }
         
