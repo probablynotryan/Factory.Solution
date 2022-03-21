@@ -8,5 +8,8 @@
 @using (Html.BeginForm())
 {
   @Html.TextBoxFor(model => model.Name)
+
+  @Html.Label("Select a machine: ")
+  @Html.DropDownList("MachineId")
   <input type="submit" value="Add Engineer" />
 }
