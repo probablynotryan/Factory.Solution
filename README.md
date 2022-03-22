@@ -34,7 +34,7 @@ An expansion of HairSalon -- this time with many to many relationships! Watch as
   } 
   ```
 * (Guess what: we're still using terminal from inside Factory/) Enter ```dotnet build```
-* After a successful build, run the project by entering ```dotnet ef database update``` (you guessed it: in terminal).
+* After a successful build, run the project by entering ```dotnet ef database update``` (you guessed it: in terminal). This will create the database we use throughout this project, so make sure MySQL is running.
 * Once that's successfully built, enter ```dotnet run`` to start the mvc site.
 * You should get a _Now listening on:_ line with the path of where its running. (ie: http://localhost.5000) Hold command and click it to open it up with your default browser.
 * Go wild!
